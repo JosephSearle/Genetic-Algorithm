@@ -2,8 +2,7 @@ import java.lang.Math;
 import java.util.*;
 
 class GeneticAlgo {
-
-    ///////////////////// Problem 1 Fields /////////////////////
+    
     public static double[][] newPop = new double[200][20];
     public static double[] fittest = new double[20];
     public static double[] secFittest = new double[20];
@@ -13,14 +12,10 @@ class GeneticAlgo {
     public static double mutationRate = 0.0001;
     public static Random rn = new Random();
     public static int count = 0;
-
+    
     public static void main(String[] args) {
-        // Do not delete/alter the next line
+        // Start time of the algorithm when ran.
         long startT = System.currentTimeMillis();
-
-        // Edit this according to your name and login
-        String name = "Joseph Searle";
-        String login = "js2176";
 
         // initialize a new population.
         double[][] population = createPop();
@@ -50,8 +45,10 @@ class GeneticAlgo {
 
             System.out.println("Generation " + count + " Fittest : " + fit);
         }
-
+        
+        // End time of algorithm when completed.
         long endT = System.currentTimeMillis();
+        // Prints the time taken for the genetic algorithm to execute.
         System.out.println("Total execution time was: " + ((endT - startT) / 1000.0) + " seconds");
 
     }
