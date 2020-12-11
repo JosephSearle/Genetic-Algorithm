@@ -154,9 +154,7 @@ class GeneticAlgo {
         // loops through the solution and mutates the selected data.
         for (int i = 0; i < sol.length; i++) {
             boolean sel = new Random().nextBoolean();
-            // A random integer selected between the values -5 and 5
             int num = new Random().nextInt(5 - (-5)) + (-5);
-            // The mutation that will be added or subtracted from the solution data
             double mutation = num * mutationRate;
             // on the random chance sel is true then add mutation, if not then subtract.
             if (sel == true) {
@@ -183,8 +181,6 @@ class GeneticAlgo {
         double[] tail = new double[10];
         double[] head = new double[10];
         Random rnd = new Random();
-        // Loops through the two solutions and adds data at random indexes to tail and
-        // head arrays.
         for (int i = 0; i < 10; i++) {
             tail[i] = sol1[rnd.nextInt(20)];
             head[i] = sol2[rnd.nextInt(20)];
